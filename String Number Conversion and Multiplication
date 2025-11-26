@@ -1,0 +1,20 @@
+Write a function solution that, given an integer D (between 1 and 5) and a string S (only "one", "two", "three", "four" or "five"), returns the result of multiplying D and S expressed as an integer.
+For example, given D = 4 and S = "two", your function should return 8.
+
+
+===========================================================
+
+My code:
+
+function solution(D, S) {
+  const stringtoNum = {
+      one: 1,
+      two: 2,
+      three: 3,
+      four: 4,
+      five: 5
+  }
+    const number = stringtoNum[S.toLowerCase()]
+    return D * number;
+}
+    console.log(solution(2,"three"));
