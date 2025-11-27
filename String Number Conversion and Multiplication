@@ -4,7 +4,7 @@ For example, given D = 4 and S = "two", your function should return 8.
 
 ===========================================================
 
-My code:
+My code (functional code):
 
 function solution(D, S) {
   const stringtoNum = {
@@ -14,6 +14,34 @@ function solution(D, S) {
       four: 4,
       five: 5
   }
+    const number = stringtoNum[S.toLowerCase()]
+    return D * number;
+}
+    console.log(solution(2,"three"));
+
+MVP = minimum valuable product. (used for demo purposes for clients)
+=====================================================================
+We covered here all the edge cases. My responsibility as a developer to make sure code is ready for all edge cases.
+Best practice code, production ready code (ready for any output):
+
+function solution(D, S) {
+
+    if (D>5 || D<1 || Number.isNaN(D) || !Number.isInteger(D)){
+    throw new Error("This should only be interger btw 1 to 5")
+        
+    }
+    
+  const stringtoNum = {
+      one: 1,
+      two: 2,
+      three: 3,
+      four: 4,
+      five: 5
+  }
+    if(!(S in stringtoNum)) {
+        throw new Error("S should only bw 1 to 5")
+
+    }
     const number = stringtoNum[S.toLowerCase()]
     return D * number;
 }
