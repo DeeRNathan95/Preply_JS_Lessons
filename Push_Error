@@ -1,0 +1,7 @@
+let newList = [1,2,3].push(4)
+
+console.log(newListpush(5))
+
+Error:
+The method push returns the length of the new array, not the array itself. By setting newList equal to [1,2,3]push(4), we set newList equal to 4.
+The we try to use the method push on newList. Since newList is a number 4, we can't use it push - an exception is thrown TypeError
