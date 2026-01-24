@@ -1,0 +1,21 @@
+function giveMePizza() {
+  return "Pizza time!"
+}
+
+const giveMeChocolate = () => "Chocolate... now go to the gym.."
+
+console.log(giveMePizza.prototype)
+console.log(giveMeChocolate.prototype)
+
+
+========
+
+
+{ constructor: ... } undefined
+
+Answer
+
+Correct answer: D
+
+Regular functions, such as giveMePizza, have a property prototype, which is an object (the object's prototype) with the property constructor. However, arrow functions, 
+such as giveMeChocolate, do not have a prototype. Therefore, when attempting to access giveMeChocolate.prototype, undefined is returned.
